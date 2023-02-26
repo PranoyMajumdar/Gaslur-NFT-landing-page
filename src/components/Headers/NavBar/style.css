@@ -1,0 +1,58 @@
+.nav-wrapper {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.nav-links .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    text-transform: uppercase;
+}
+
+.nav-links .nav-list .active-link {
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+
+.nav-links .nav-list li:hover {
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btns button {
+    text-transform: uppercase;
+
+}
+
+.nav-btn-1 {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+}
