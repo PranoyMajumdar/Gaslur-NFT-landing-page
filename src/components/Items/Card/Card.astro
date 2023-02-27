@@ -1,0 +1,26 @@
+---
+import "./style.css";
+export interface Props {
+    image: string;
+    title: string;
+    weth: string;
+    endsIn: string;
+}
+const { title, weth, endsIn, image } = Astro.props;
+---
+
+<div class="card">
+    <img src={image} alt={title} />
+
+    <div class="card-footer">
+        <div class="card-footer-header">
+            <h4>{title}</h4>
+            <p>{weth} Weth</p>
+        </div>
+        <span class="card-line"></span>
+        <div class="card-footer-bottom">
+            <p class="card-ends-in">Ends in <span>{endsIn}</span></p>
+            <button class="card-btn">Bid</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.hot-auctions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auction-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.auction-header .auction-view-all{
+    display: flex;
+    align-items: center;
+    gap: .30rem
+}
+.auction-header .auction-view-all svg{
+    width:1rem;
+}
+.auction-view-all p{
+    font-size: .70rem;
+}
+.auction-header h2{
+    font-weight: 400;
+    font-size: 1.7rem;
+    letter-spacing: -1px;
+}
+.hot-auction-items{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
