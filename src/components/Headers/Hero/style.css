@@ -8,10 +8,10 @@
 }
 
 .hero .hero-details .hero-text h1 {
-    font-size: 3rem;
+    font-size: 3.8rem;
     font-weight: 600;
     letter-spacing: -2px;
-    /* line-height: 82px; */
+    line-height: 82px;
 
 }
 
