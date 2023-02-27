@@ -1,6 +1,6 @@
 .hero {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     gap: 2rem;
     margin: 20rem 0;
