@@ -11,6 +11,7 @@
     colors
     */
     --bg-color: #1F1D2B;
+    --bg-color-alt: hsl(255, 19%, 10%);
     --primary-color: #FB37FF;
     --primary-color-alt: #9B51E0;
     --cribbean-blue-color: #18B2DE;
@@ -32,6 +33,13 @@
      transitions
     */
     --transition: all .5s ease-in-out;
+
+    /**
+     hamburgur sizes
+     */
+     --bar-width: 4rem;
+     --bar-height: .8rem;
+     --hamburgur-gap: .6rem;
 }
 
 /*============================*\

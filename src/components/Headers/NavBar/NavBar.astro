@@ -1,10 +1,9 @@
 ---
-import './style.css';
+import "./style.css";
 ---
 
 <nav class="container nav-wrapper">
     <h1 class="nav-logo">GASLUR</h1>
-
     <div class="nav-links">
         <ul class="nav-list">
             <li class="active-link"><a href="">home</a></li>
@@ -13,9 +12,35 @@ import './style.css';
             <li><a href="">how it works</a></li>
         </ul>
     </div>
-
     <div class="nav-btns">
         <button class="nav-btn-1">create</button>
         <button class="nav-btn-2">sign in</button>
     </div>
+    <button class="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
+<script lang="typescript">
+const navMenuButton = document.querySelector('.nav-menu');
+const navMenus = document.querySelectorAll('.nav-menu span');
+const navLinks = document.querySelector(".nav-links");
+let isOpen = false;
+const handleNav = () => {
+    if(!isOpen){
+        navMenus[0].style.transform = "rotate(43deg)";
+        navMenus[1].style.opacity = 0;
+        navMenus[2].style.transform = "rotate(-43deg)";
+        navLinks.style.transform = "translateY(0%)";
+        isOpen = true
+    }else {
+        navMenus[0].style.transform = "none";
+        navMenus[1].style.opacity = 1;
+        navMenus[2].style.transform = "none";
+        navLinks.style.transform = "translateY(100%)";
+        isOpen = false
+    }
+}
+navMenuButton.addEventListener("click", handleNav)
+</script>
