@@ -8,7 +8,7 @@
 }
 
 .hero .hero-details .hero-text h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-weight: 600;
     letter-spacing: -2px;
     line-height: 82px;
@@ -58,53 +58,97 @@
     padding: 2rem;
     border-radius: 35.0246px;
     position: relative;
-    border: 4px solid rgba(58, 129, 191, 0.08)
+    border: 4px solid rgba(58, 129, 191, 0.08);
+    width: fit-content;
+    height: fit-content;
+
 }
-.hero-showcase::after{
+.card-image-main img{
+    width: 15rem;
+}
+.hero-showcase::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     background: var(--primary-color);
-    width: 10rem;
-    height: 10rem;
-    filter: blur(160px);
+    width: 7rem;
+    height: 7rem;
+    filter: blur(70px);
+    z-index: -1;
 }
-.hero-showcase::before{
+
+.hero-showcase::before {
     content: "";
     position: absolute;
     bottom: 0;
     right: 0;
     background: var(--cribbean-blue-color);
-    width: 10rem;
-    height: 10rem;
-    filter: blur(160px);
+    width: 7rem;
+    height: 7rem;
+    filter: blur(70px);
+    z-index: -1;
 }
 
-.card-footer{
+.card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
+    gap: 2rem
 }
-.card-author{
+
+.card-author {
     display: flex;
     align-items: center;
     gap: .80rem;
 }
-.card-author-info, .card-footer-info-text h3{
+
+.card-author-info,
+.card-footer-info-text h3 {
     font-size: .70rem;
 }
-.card-footer-info-icon svg{
+
+.card-footer-info-icon svg {
     width: .90rem;
 }
-.card-footer-info-icon{
+
+.card-footer-info-icon {
     display: flex;
     align-items: center;
     gap: .30rem;
 }
+
 .card-footer-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 769px) {
+    .hero {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero .hero-details .hero-text h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: none;
+        line-height: 1.1;
+
+    }
+
+    .hero .hero-details .hero-text p {
+        font-weight: 400;
+        font-size: .80rem;
+        color: var(--gray-1);
+    }
+
+    .card-image-main img{
+        width: 15rem;
+    }
+    
 }

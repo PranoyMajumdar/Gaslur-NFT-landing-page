@@ -106,7 +106,8 @@
         transition: all 0.3s ease-in-out;
         transform: translateY(100%);
         overflow: scroll;
-        box-shadow: -.1rem -1rem 3rem var(--bg-color)
+        box-shadow: -.1rem -1rem 3rem var(--bg-color);
+        z-index: 9999;
     }
 
     .nav-links .nav-list {
