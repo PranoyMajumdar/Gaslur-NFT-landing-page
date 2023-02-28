@@ -152,15 +152,16 @@
     .hero .hero-details .hero-text h1 {
         font-size: 2rem;
         font-weight: 600;
-        letter-spacing: none;
+        letter-spacing: 1px;
         line-height: 1.1;
 
     }
 
     .hero .hero-details .hero-text p {
         font-weight: 400;
-        font-size: .80rem;
+        font-size: .70rem;
         color: var(--gray-1);
+        letter-spacing: 1px;
     }
 
     .card-image-main img {

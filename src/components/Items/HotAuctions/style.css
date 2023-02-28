@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .auction-header{
@@ -23,7 +23,7 @@
 }
 .auction-header h2{
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     letter-spacing: -1px;
 }
 .hot-auction-items{
@@ -32,4 +32,11 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+@media screen and (max-width: 300px){
+    .auction-header h2{
+        font-weight: 400;
+        font-size: .70rem;
+        letter-spacing: -1px;
+    }
 }
