@@ -1,61 +1,232 @@
----
-import "./style.css";
----
-
 <main class="hero container">
-    <section class="hero-details">
-        <div class="hero-text">
-            <h1>
-                Discover, collect, and charity in extraordinary NFT marketplace
-            </h1>
-            <p>
-                In aenean posuere lorem risus nec. Tempor tincidunt aenean purus
-                purus vestibulum nibh mi venenatis
-            </p>
-        </div>
-        <div class="hero-btns">
-            <button class="hero-btn-1">Explore</button>
-            <button class="hero-btn-2">Create</button>
-        </div>
-    </section>
+  <section class="hero-details">
+    <div class="hero-text">
+      <h1>Discover, collect, and charity in extraordinary NFT marketplace</h1>
+      <p>
+        In aenean posuere lorem risus nec. Tempor tincidunt aenean purus purus
+        vestibulum nibh mi venenatis
+      </p>
+    </div>
+    <div class="hero-btns">
+      <button class="hero-btn-1">Explore</button>
+      <button class="hero-btn-2">Create</button>
+    </div>
+  </section>
 
-    <section class="hero-showcase">
-        <div class="hero-card-wrap">
-            <div class="card-image-main">
-                <img src="/hero-png.png" alt="card-image" />
-            </div>
-            <div class="card-footer">
-                <div class="card-author">
-                    <div class="card-author-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1529946179074-87642f6204d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                            alt=""
-                        />
-                    </div>
-                    <div class="card-author-info">
-                        <h3>Laura</h3>
-                        <small>0.21 Weth</small>
-                    </div>
-                </div>
-                <div class="card-footer-info">
-                    <div class="card-footer-info-text">
-                        <h3>WE ARE HERE</h3>
-                    </div>
-                    <div class="card-footer-info-icon">
-                        <svg
-                            style="fill: white;"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            height="24"
-                            ><path fill="none" d="M0 0H24V24H0z"></path><path
-                                d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"
-                            ></path></svg
-                        >
-                        <strong>25</strong>
-                    </div>
-                </div>
-            </div>
+  <section class="hero-showcase">
+    <div class="hero-card-wrap">
+      <div class="card-image-main">
+        <img src="/hero-png.png" alt="card-image" />
+      </div>
+      <div class="card-footer">
+        <div class="card-author">
+          <div class="card-author-image">
+            <img
+              src="https://images.unsplash.com/photo-1529946179074-87642f6204d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              alt=""
+            />
+          </div>
+          <div class="card-author-info">
+            <h3>Laura</h3>
+            <small>0.21 Weth</small>
+          </div>
         </div>
-    </section>
+        <div class="card-footer-info">
+          <div class="card-footer-info-text">
+            <h3>WE ARE HERE</h3>
+          </div>
+          <div class="card-footer-info-icon">
+            <svg
+              style="fill: white;"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              ><path fill="none" d="M0 0H24V24H0z"></path><path
+                d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"
+              ></path></svg
+            >
+            <strong>25</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 20rem 0;
+    padding: 4rem 2rem;
+  }
+
+  .hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: .70rem;
+  }
+  .hero .hero-details .hero-text h1 {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 50px;
+  }
+
+  .hero .hero-details .hero-text p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--gray-1);
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .hero-btns button {
+    font-weight: 600;
+  }
+
+  .hero-btn-1 {
+    background-image: var(--gradient-1);
+    padding: 0.7rem 2.3rem;
+    border-radius: 7px;
+  }
+
+  .hero-btn-2 {
+    border-radius: 7px;
+    padding: 0.7rem 2.3rem;
+    border: 1px solid var(--gray-1);
+  }
+
+  .card-author-image img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* Card */
+  .hero-showcase {
+    background: linear-gradient(
+      169.44deg,
+      rgba(58, 129, 191, 0.08) 1.85%,
+      rgba(65, 48, 90, 0.08) 98.72%
+    );
+    backdrop-filter: blur(555px);
+    padding: 2rem;
+    border-radius: 35.0246px;
+    position: relative;
+    border: 4px solid rgba(58, 129, 191, 0.08);
+    width: fit-content;
+    height: fit-content;
+    /* animation: UpDown 5s infinite; */
+  }
+
+  /* @keyframes UpDown{
+    0% {
+        transform: translateY(10%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+} */
+  .card-image-main img {
+    width: 20rem;
+  }
+
+  .hero-showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    width: 7rem;
+    height: 7rem;
+    filter: blur(70px);
+    z-index: -1;
+  }
+
+  .hero-showcase::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--cribbean-blue-color);
+    width: 7rem;
+    height: 7rem;
+    filter: blur(70px);
+    z-index: -1;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .card-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .card-author-info,
+  .card-footer-info-text h3 {
+    font-size: 0.7rem;
+  }
+
+  .card-footer-info-icon svg {
+    width: 0.9rem;
+  }
+
+  .card-footer-info-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .card-footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 5rem;
+    height: 2rem;
+  }
+
+  /* For Mobile */
+  @media screen and (max-width: 769px) {
+    .hero {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .hero .hero-details .hero-text h1 {
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+
+    .hero .hero-details .hero-text p {
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: var(--gray-1);
+      letter-spacing: 1px;
+    }
+
+    .card-image-main img {
+      width: 15rem;
+    }
+  }
+</style>

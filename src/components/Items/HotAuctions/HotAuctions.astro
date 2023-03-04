@@ -1,31 +1,83 @@
 ---
 import Card from "../Card/Card.astro";
 import { hotAuctionsItems } from "./nfts";
-import "./style.css"
 ---
 
 <section class="hot-auctions container">
-    <div class="auction-header">
-        <h2>Hot auctions</h2>
-        <div class="auction-view-all">
-            <p>View all</p>
-            <svg
-                style="fill: white;"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                ><path fill="none" d="M0 0h24v24H0z"></path><path
-                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                ></path></svg
-            >
-        </div>
+  <div class="auction-header">
+    <h2>Hot auctions</h2>
+    <div class="auction-view-all">
+      <p>View all</p>
+      <svg
+        style="fill: white;"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        ><path fill="none" d="M0 0h24v24H0z"></path><path
+          d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+        ></path></svg
+      >
     </div>
-    <div class="hot-auction-items">
-        {
-            hotAuctionsItems && hotAuctionsItems.map((item) => {
-                return <Card image={item.image} title={item.title} endsIn={item.endsIn} weth={item.weth}/>
-            })
-        }
-    </div>
+  </div>
+  <div class="hot-auction-items">
+    {
+      hotAuctionsItems &&
+        hotAuctionsItems.map((item) => {
+          return (
+            <Card
+              image={item.image}
+              title={item.title}
+              endsIn={item.endsIn}
+              weth={item.weth}
+            />
+          );
+        })
+    }
+  </div>
 </section>
+
+<style>
+  .hot-auctions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .auction-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .auction-header .auction-view-all {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .auction-header .auction-view-all svg {
+    width: 1rem;
+  }
+  .auction-view-all p {
+    font-size: 0.7rem;
+  }
+  .auction-header h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+  }
+  .hot-auction-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 300px) {
+    .auction-header h2 {
+      font-weight: 400;
+      font-size: 0.7rem;
+      letter-spacing: -1px;
+    }
+  }
+</style>

@@ -1,46 +1,164 @@
----
-import "./style.css";
----
+
 
 <nav class="container nav-wrapper">
-    <h1 class="nav-logo">GASLUR</h1>
-    <div class="nav-links">
-        <ul class="nav-list">
-            <li class="active-link"><a href="">home</a></li>
-            <li><a href="">my profile</a></li>
-            <li><a href="">activity</a></li>
-            <li><a href="">how it works</a></li>
-        </ul>
-    </div>
-    <div class="nav-btns">
-        <button class="nav-btn-1">create</button>
-        <button class="nav-btn-2">sign in</button>
-    </div>
-    <button class="nav-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+  <h1 class="nav-logo">GASLUR</h1>
+  <div class="nav-links">
+    <ul class="nav-list">
+      <li class="active-link"><a href="">home</a></li>
+      <li><a href="">my profile</a></li>
+      <li><a href="">activity</a></li>
+      <li><a href="">how it works</a></li>
+    </ul>
+  </div>
+  <div class="nav-btns">
+    <button class="nav-btn-1">create</button>
+    <button class="nav-btn-2">sign in</button>
+  </div>
+  <button class="nav-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 <script lang="typescript">
-const navMenuButton = document.querySelector('.nav-menu');
-const navMenus = document.querySelectorAll('.nav-menu span');
-const navLinks = document.querySelector(".nav-links");
-let isOpen = false;
-const handleNav = () => {
-    if(!isOpen){
-        navMenus[0].style.transform = "rotate(43deg)";
-        navMenus[1].style.opacity = 0;
-        navMenus[2].style.transform = "rotate(-43deg)";
-        navLinks.style.transform = "translateY(0%)";
-        isOpen = true
-    }else {
-        navMenus[0].style.transform = "none";
-        navMenus[1].style.opacity = 1;
-        navMenus[2].style.transform = "none";
-        navLinks.style.transform = "translateY(100%)";
-        isOpen = false
+  const navMenuButton = document.querySelector(".nav-menu");
+  const navMenus = document.querySelectorAll(".nav-menu span");
+  const navLinks = document.querySelector(".nav-links");
+  let isOpen = false;
+  const handleNav = () => {
+    if (!isOpen) {
+      navMenus[0].style.transform = "rotate(43deg)";
+      navMenus[1].style.opacity = 0;
+      navMenus[2].style.transform = "rotate(-43deg)";
+      navLinks.style.transform = "translateY(0%)";
+      isOpen = true;
+    } else {
+      navMenus[0].style.transform = "none";
+      navMenus[1].style.opacity = 1;
+      navMenus[2].style.transform = "none";
+      navLinks.style.transform = "translateY(100%)";
+      isOpen = false;
     }
-}
-navMenuButton.addEventListener("click", handleNav)
+  };
+  navMenuButton.addEventListener("click", handleNav);
 </script>
+
+<style>
+  .nav-wrapper {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  .nav-links .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    text-transform: uppercase;
+  }
+
+  .nav-links .nav-list .active-link {
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  .nav-links .nav-list li:hover {
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .nav-btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav-btns button {
+    text-transform: uppercase;
+  }
+
+  .nav-btn-1 {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  /* For Mobile */
+  @media screen and (max-width: 769px) {
+    /* .nav-wrapper {height: 3rem; position: relative;} */
+    .nav-logo {
+      font-size: 1.3rem;
+    }
+
+    .nav-btns {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      width: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      gap: 0.5rem;
+    }
+
+    .nav-menu span {
+      background-color: var(--text-color);
+      height: 0.19rem;
+      width: 100%;
+      transform-origin: left;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+    }
+
+    .nav-links {
+      position: fixed;
+      background: var(--bg-color-alt);
+      width: 100%;
+      height: fit-content;
+      left: 1;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      border-radius: 1rem 1rem;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(100%);
+      overflow: scroll;
+      box-shadow: -0.1rem -1rem 3rem var(--bg-color);
+      z-index: 9999;
+    }
+
+    .nav-links .nav-list {
+      flex-direction: column;
+    }
+
+    .nav-links .nav-list li {
+      font-weight: 550;
+      font-size: 1rem;
+    }
+  }
+</style>
